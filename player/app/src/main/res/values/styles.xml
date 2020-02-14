@@ -1,0 +1,45 @@
+<resources>
+
+    <!--app的名称-->
+    <!--<string name="app_name">sharemate</string>-->
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Base.Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">@color/deepOrange</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!--日期选择器的样式-->
+    <style name="datePickerStyle" parent="@android:style/Widget.Holo.DatePicker">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <!--选项卡 每个选项的样式-->
+    <style name="Tabs">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/deepGray</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+    <!--首页中每个选项的样式-->
+    <style name="homeTabs">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:textColor">@color/deepGray</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <!--页面返回按钮的样式-->
+    <style name="returnButtonStyle">
+        <item name="android:layout_height">30dp</item>
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_marginLeft">15dp</item>
+        <item name="android:layout_gravity">center_vertical</item>
+        <item name="android:background">@drawable/back3</item>
+    </style>
+</resources>

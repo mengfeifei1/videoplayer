@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grayishBlue">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+        <TextView
+            android:id="@+id/tv_index"
+            android:text="首页"
+            style="@style/Tabs" />
+        <TextView
+            android:id="@+id/tv_program"
+            android:text="频道"
+            style="@style/Tabs"/>
+        <TextView
+            android:id="@+id/tv_order"
+            android:text="排行"
+            style="@style/Tabs"/>
+        <TextView
+            android:id="@+id/tv_my"
+            android:text="个人"
+            style="@style/Tabs"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"/>
+
+</RelativeLayout>
