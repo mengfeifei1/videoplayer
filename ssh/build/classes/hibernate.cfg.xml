@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory><!-- 必须配置的 -->
+		<!-- 数据库方言 -->
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		
+		<!-- 设置编码方式 -->
+		<property name="hibernate.connection.characterEncoding">UTF-8</property>
+		<!-- 打印sql语句 -->
+		<property name="hibernate.show_sql">true</property>
+		<!-- 格式化输出sql语句 -->
+		<property name="hibernate.format_sql">true</property>
+		<!--     	update: 这个操作启动的时候会去检查schema是否一致，如果不一致会做scheme更新 -->
+    	<property name="hbm2ddl.auto">update</property>
+
+	</session-factory>
+</hibernate-configuration>
