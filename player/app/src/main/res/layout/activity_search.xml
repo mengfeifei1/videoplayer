@@ -7,36 +7,40 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:orientation="horizontal">
-        <Button
-            android:layout_width="70dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bottom_item">
+        <TextView
+            android:id="@+id/tv_back"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="40dp"
             android:layout_marginTop="8dp"
-            android:textSize="22sp"
+            android:gravity="center"
+            android:textSize="20sp"
             android:background="@color/white"
             android:text="返回"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:orientation="horizontal">
             <EditText
+                android:id="@+id/tv_search"
                 android:inputType="text"
                 android:singleLine="true"
                 android:imeOptions="actionSearch"
-                android:layout_width="250dp"
+                android:layout_width="0dp"
+                android:layout_weight="5"
                 android:layout_height="35dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginLeft="8dp"
                 android:background="@drawable/search_text"/>
             <ImageView
-                android:layout_width="30dp"
+                android:id="@+id/img_search"
+                android:layout_width="0dp"
                 android:layout_height="30dp"
-                android:layout_marginTop="13dp"
+                android:layout_weight="1"
+                android:layout_marginTop="15dp"
                 android:layout_marginLeft="5dp"
                 android:src="@drawable/search"/>
-        </LinearLayout>
     </LinearLayout>
     <ListView
+        android:id="@+id/list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>
 </LinearLayout>

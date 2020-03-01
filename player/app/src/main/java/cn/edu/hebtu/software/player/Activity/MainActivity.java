@@ -14,16 +14,16 @@ import java.util.List;
 
 import cn.edu.hebtu.software.player.Fragment.IndexFragment;
 import cn.edu.hebtu.software.player.Fragment.MyFragment;
-import cn.edu.hebtu.software.player.Fragment.ProgramFragment;
+import cn.edu.hebtu.software.player.Fragment.OrderFragment;
 import cn.edu.hebtu.software.player.R;
 
 public class MainActivity extends AppCompatActivity {
     private TextView indexView;
-    private TextView programView;
+    private TextView orderView;
     private TextView myView;
     private List<TextView> views = new ArrayList<>();
     private IndexFragment indexFragment = new IndexFragment();
-    private ProgramFragment programFragment = new ProgramFragment();
+    private OrderFragment orderFragment = new OrderFragment();
     private MyFragment myFragment = new MyFragment();
     private FragmentManager manager ;
     private Fragment currentFragment = new Fragment();
@@ -34,12 +34,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         indexView = findViewById(R.id.tv_index);
-        programView = findViewById(R.id.tv_program);
+        orderView = findViewById(R.id.tv_order);
         myView = findViewById(R.id.tv_my);
         manager = getSupportFragmentManager();
 
         views.add(indexView);
-        views.add(programView);
+        views.add(orderView);
         views.add(myView);
         showFragment(indexFragment);
         setClickListener();
@@ -54,8 +54,8 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.tv_index:
                         showFragment(indexFragment);
                         break;
-                    case R.id.tv_program:
-                        showFragment(programFragment);
+                    case R.id.tv_order:
+                        showFragment(orderFragment);
                         break;
                     case R.id.tv_my:
                         showFragment(myFragment);
@@ -66,10 +66,10 @@ public class MainActivity extends AppCompatActivity {
                 for(TextView view : views){
                     TextView tmp = findViewById(v.getId());
                     if(tmp == view){
-                        view.setTextColor(getResources().getColor(R.color.deepOrange));
+                        view.setTextColor(getResources().getColor(R.color.white));
                         view.setTextSize(TypedValue.COMPLEX_UNIT_SP,23);
                     }else{
-                        view.setTextColor(getResources().getColor(R.color.deepGray));
+                        view.setTextColor(getResources().getColor(R.color.inkGray));
                         view.setTextSize(TypedValue.COMPLEX_UNIT_SP,21);
                     }
                 }
@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
 
         };
         indexView.setOnClickListener(listener);
-        programView.setOnClickListener(listener);
+        orderView.setOnClickListener(listener);
         myView.setOnClickListener(listener);
     }
 

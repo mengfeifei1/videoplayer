@@ -34,12 +34,4 @@
         <item name="android:gravity">center_horizontal</item>
     </style>
 
-    <!--页面返回按钮的样式-->
-    <style name="returnButtonStyle">
-        <item name="android:layout_height">30dp</item>
-        <item name="android:layout_width">30dp</item>
-        <item name="android:layout_marginLeft">15dp</item>
-        <item name="android:layout_gravity">center_vertical</item>
-        <item name="android:background">@drawable/back3</item>
-    </style>
 </resources>

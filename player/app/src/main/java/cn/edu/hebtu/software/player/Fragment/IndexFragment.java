@@ -22,7 +22,6 @@ import cn.edu.hebtu.software.player.R;
 
 public class IndexFragment extends Fragment {
     private TextView searchView;
-    private ImageView megImg; //消息符
     private ImageView userPhoto; //个人头像
     private TextView hotView;
     private TextView cartoonView;
