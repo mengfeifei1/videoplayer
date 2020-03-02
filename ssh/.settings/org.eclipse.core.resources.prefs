@@ -1,4 +1,16 @@
 eclipse.preferences.version=1
+encoding//WebContent/add.jsp=UTF-8
+encoding//WebContent/bottom.jsp=UTF-8
+encoding//WebContent/index.jsp=UTF-8
+encoding//WebContent/left.jsp=UTF-8
+encoding//WebContent/main.jsp=UTF-8
+encoding//WebContent/main_comment.jsp=UTF-8
+encoding//WebContent/main_danmu.jsp=UTF-8
+encoding//WebContent/main_hot.jsp=UTF-8
+encoding//WebContent/main_list.jsp=UTF-8
+encoding//WebContent/main_num.jsp=UTF-8
+encoding//WebContent/swich.jsp=UTF-8
+encoding//WebContent/top.jsp=UTF-8
 encoding//src/com/cakeshop/bean/CommentBean.java=UTF-8
 encoding//src/com/cakeshop/daoImpl/BaseDaoImpl.java=UTF-8
 encoding//src/com/cakeshop/daoImpl/VideoDaoImpl.java=UTF-8

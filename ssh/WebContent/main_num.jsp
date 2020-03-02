@@ -1,7 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>主要内容区main</title>
+<c:set value="${pageContext.request.contextPath }" var="ctx"></c:set>
 <link href="css/css.css" type="text/css" rel="stylesheet" />
 <link href="css/main.css" type="text/css" rel="stylesheet" />
 <link rel="shortcut icon" href="images/main/favicon.ico" />
@@ -82,13 +87,13 @@ body {
 #main-tab th {
 	font-size: 12px;
 	background: url(images/main/list_bg.jpg) repeat-x;
-	height: 32px;
-	line-height: 32px;
+	height: 25px;
+	line-height: 25px;
 }
 
 #main-tab td {
 	font-size: 12px;
-	line-height: 40px;
+	line-height: 25px;
 }
 
 #main-tab td a {
@@ -121,13 +126,23 @@ body {
 	color: #dbdbdb;
 }
 
+#selete{
+	font-size: 15px;
+	margin-left:10px;
+	text-decoration:none;
+	color: #ffffff;
+}
+
 td.fenye {
-	padding: 10px 0 0 0;
 	text-align: right;
 }
 
 .bggray {
 	background: #f9f9f9
+}
+
+#addinfo {
+	padding: 0 0 10px 0;
 }
 </style>
 </head>
@@ -136,72 +151,33 @@ td.fenye {
 	<table width="99%" border="0" cellspacing="0" cellpadding="0"
 		id="searchmain">
 		<tr>
-			<td width="99%" align="left" valign="top">您的位置：视频列表</td>
-		</tr>
-		<tr>
-			<td align="left" valign="top">
-				<table width="100%" border="0" cellspacing="0" cellpadding="0"
-					id="search">
-					<tr>
-						<td width="90%" align="left" valign="middle">
-							<form method="post" action="">
-								<span>视频标题：</span> <input type="text" name="" value=""
-									class="text-word"> <input name="" type="button"
-									value="查询" class="text-but">
-							</form>
-						</td>
-					</tr>
-				</table>
-			</td>
+			<td width="99%" align="left" valign="top" id="addinfo">您的位置：视频排行</td>
 		</tr>
 		<tr>
 			<td align="left" valign="top">
 
 				<table width="100%" border="0" cellspacing="0" cellpadding="0"
 					id="main-tab">
-					<tr>
-						<th align="center" valign="middle" class="borderright">视频编号</th>
+					<tr style="background-color: #ddd">
+						<th align="center" valign="middle" class="borderright">视频获赞数</th>
 						<th align="center" valign="middle" class="borderright">视频标题</th>
 						<th align="center" valign="middle" class="borderright">视频封面</th>
-						<th align="center" valign="middle" class="borderright">视频获赞数</th>
-						<th align="center" valign="middle" class="borderright">视频评论数</th>
 						<th align="center" valign="middle" class="borderright">视频分类</th>
-						<th align="center" valign="middle">操作</th>
 					</tr>
+					<c:forEach items="${videoList}" var="videos">
 					<tr onMouseOut="this.style.backgroundColor='#ffffff'"
 						onMouseOver="this.style.backgroundColor='#edf5ff'">
 						<td align="center" valign="middle"
-							class="borderright borderbottom">1</td>
+							class="borderright borderbottom">${videos.videoZanNum}</td>
 						<td align="center" valign="middle"
-							class="borderright borderbottom">测试测试测试测试测试测试</td>
+							class="borderright borderbottom">${videos.videoTitle}</td>
 						<td align="center" valign="middle"
-							class="borderright borderbottom"><img src="images/videoPhotos/p1.jpg" width="74" height="50"></td>
+							class="borderright borderbottom"><img src="${ctx }/${videos.videoPic}" width="74" height="60" style="margin-top:5px"></td>
 						<td align="center" valign="middle"
-							class="borderright borderbottom">15</td>
-						<td align="center" valign="middle"
-							class="borderright borderbottom">12</td>
-						<td align="center" valign="middle"
-							class="borderright borderbottom">动漫</td>
-						<td align="center" valign="middle" class="borderbottom">
-						    <a href="add.html" target="mainFrame" onFocus="this.blur()"
-							class="add">新建</a>
-							<span class="gray">&nbsp;|&nbsp;</span>
-							<a href="add.html" target="mainFrame" onFocus="this.blur()"
-							class="add">编辑</a>
-							<span class="gray">&nbsp;|&nbsp;</span>
-							<a href="add.html" target="mainFrame" onFocus="this.blur()"
-							class="add">删除</a>
-							</td>
-					</tr>	
+							class="borderright borderbottom">${videos.videoType}</td>
+					</tr>
+					</c:forEach>
 				</table>
-			</td>
-		</tr>
-		<tr>
-			<td align="left" valign="top" class="fenye">1条数据 1/1
-				页&nbsp;&nbsp;<a href="#" target="mainFrame" onFocus="this.blur()">首页</a>&nbsp;&nbsp;<a
-				href="#" target="mainFrame" onFocus="this.blur()">上一页</a>&nbsp;&nbsp;<a
-				href="#" target="mainFrame" onFocus="this.blur()">下一页</a>&nbsp;&nbsp;<a
-				href="#" target="mainFrame" onFocus="this.blur()">尾页</a>
 			</td>
 		</tr>
 	</table>

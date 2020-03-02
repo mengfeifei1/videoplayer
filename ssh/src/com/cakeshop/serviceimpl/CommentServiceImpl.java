@@ -25,4 +25,17 @@ public class CommentServiceImpl implements CommentService{
 		commentDao.addCommentById(comment);
 	}
 
+	//新增方法
+	@Override
+	public List<CommentBean> getAllComment() {
+		// TODO Auto-generated method stub
+		return commentDao.getAllComment();
+	}
+
+	@Override
+	public void deleteComment(int commentId) {
+		// TODO Auto-generated method stub
+		commentDao.deleteComment(commentId);
+	}
+
 }

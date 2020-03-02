@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -15,6 +17,17 @@ public class BarrageBean implements Serializable{
 	private int barrageId;
 	private int barrageVideoId;
 	private String barrageDetail;
+	
+	@OneToOne
+    @JoinColumn(name = "barrage_video_id")
+	private VideoBean video;	
+
+	public VideoBean getVideo() {
+		return video;
+	}
+	public void setVideo(VideoBean video) {
+		this.video = video;
+	}
 	public BarrageBean() {
 		super();
 		// TODO Auto-generated constructor stub

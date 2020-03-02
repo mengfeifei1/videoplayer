@@ -51,5 +51,17 @@ public class VideoServiceImpl implements VideoService{
 		// TODO Auto-generated method stub
 		return videoDao.GetTitleVideoList(title);
 	}
+	
+	//新增方法
+	@Override
+	public List<VideoBean> getVideoById(int videoId) {
+		// TODO Auto-generated method stub
+		return videoDao.getVideoById(videoId);
+	}
+	@Override
+	public void updateVideo(VideoBean videoBean) {
+		// TODO Auto-generated method stub
+		videoDao.updateVideo(videoBean);
+	}
 
 }

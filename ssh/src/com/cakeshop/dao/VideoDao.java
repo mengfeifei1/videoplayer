@@ -11,16 +11,12 @@ import com.cakeshop.bean.VideoBean;
 public interface VideoDao {
 	public List<VideoBean> getVideo(int userId);
 	public List<ShoucangBean> getShoucangVideoId(int userId);
-	public VideoBean getShoucangVideo(int videoId);
-	//ªÒµ√»´≤ø ”∆µ
-	public List<VideoBean> GetALLVideoList();
-		
-	//∞¥’’µ„‘ﬁ…˝–ÚªÒµ√»´≤ø ”∆µ
-	public List<VideoBean> GetOrderVideoList();
-		
-	//∞¥’’ ”∆µ¿‡–ÕªÒµ√ ”∆µ
-	public List<VideoBean> GetTypeVideoList(String type);
-		
-	//∞¥’’ ”∆µ±ÍÃ‚ªÒµ√ ”∆µ
+	public VideoBean getShoucangVideo(int videoId);	
+	public List<VideoBean> GetALLVideoList();		
+	public List<VideoBean> GetOrderVideoList();		
+	public List<VideoBean> GetTypeVideoList(String type);		
 	public List<VideoBean> GetTitleVideoList(String title);
+	//Êñ∞ÊñπÊ≥ï
+	public List<VideoBean> getVideoById(int videoId);
+	public void updateVideo(VideoBean videoBean);
 }

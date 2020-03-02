@@ -1,7 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>主要内容区main</title>
+<title>推荐区</title>
+<c:set value="${pageContext.request.contextPath }" var="ctx"></c:set>
 <link href="css/css.css" type="text/css" rel="stylesheet" />
 <link href="css/main.css" type="text/css" rel="stylesheet" />
 <link rel="shortcut icon" href="images/main/favicon.ico" />
@@ -80,13 +85,13 @@ body {
 #main-tab th {
 	font-size: 12px;
 	background: url(images/main/list_bg.jpg) repeat-x;
-	height: 32px;
-	line-height: 32px;
+	height: 25px;
+	line-height: 25px;
 }
 
 #main-tab td {
 	font-size: 12px;
-	line-height: 40px;
+	line-height: 35px;
 }
 
 #main-tab td a {
@@ -138,47 +143,36 @@ td.fenye {
 	<table width="99%" border="0" cellspacing="0" cellpadding="0"
 		id="searchmain">
 		<tr>
-			<td width="99%" align="left" valign="top" id="addinfo">您的位置：弹幕列表</td>
+			<td width="99%" align="left" valign="top" id="addinfo">您的位置：推荐视频列表</td>
 		</tr>
 		<tr>
 			<td align="left" valign="top">
 
 				<table width="100%" border="0" cellspacing="0" cellpadding="0"
 					id="main-tab">
-					<tr>
-						<th align="center" valign="middle" class="borderright">编号</th>
-						<th align="center" valign="middle" class="borderright">留言类型</th>
-						<th align="center" valign="middle" class="borderright">标题</th>
-						<th align="center" valign="middle" class="borderright">邮箱</th>
-						<th align="center" valign="middle" class="borderright">留言时间</th>
-						<th align="center" valign="middle">操作</th>
+					<tr style="background-color: #ddd">
+						<th align="center" valign="middle" class="borderright">视频编号</th>
+						<th align="center" valign="middle" class="borderright">视频标题</th>
+						<th align="center" valign="middle" class="borderright">视频封面</th>
+						<th align="center" valign="middle" class="borderright">视频分类</th>
+						<th align="center" valign="middle" class="borderright">视频获赞数</th>
 					</tr>
+					<c:forEach items="${videoList}" var="videos">
 					<tr onMouseOut="this.style.backgroundColor='#ffffff'"
 						onMouseOver="this.style.backgroundColor='#edf5ff'">
 						<td align="center" valign="middle"
-							class="borderright borderbottom">1</td>
+							class="borderright borderbottom">${videos.videoId}</td>
 						<td align="center" valign="middle"
-							class="borderright borderbottom">留言测试</td>
+							class="borderright borderbottom">${videos.videoTitle}</td>
 						<td align="center" valign="middle"
-							class="borderright borderbottom"><a href="message_info.html"
-							target="mainFrame" onFocus="this.blur()">留言测试留言测试留言测试留言测试内容</a></td>
+							class="borderright borderbottom"><img src="${ctx }/${videos.videoPic}" width="74" height="60" style="margin-top:5px"></td>
 						<td align="center" valign="middle"
-							class="borderright borderbottom">admin@sina.com</td>
+							class="borderright borderbottom">${videos.videoType}</td>
 						<td align="center" valign="middle"
-							class="borderright borderbottom">2013-04-19 15:35:13</td>
-						<td align="center" valign="middle" class="borderbottom"><a
-							href="add.html" target="mainFrame" onFocus="this.blur()"
-							class="add">删除</a></td>
+							class="borderright borderbottom">${videos.videoZanNum}</td>
 					</tr>
+					</c:forEach>
 				</table>
-			</td>
-		</tr>
-		<tr>
-			<td align="left" valign="top" class="fenye">11 条数据 1/1
-				页&nbsp;&nbsp;<a href="#" target="mainFrame" onFocus="this.blur()">首页</a>&nbsp;&nbsp;<a
-				href="#" target="mainFrame" onFocus="this.blur()">上一页</a>&nbsp;&nbsp;<a
-				href="#" target="mainFrame" onFocus="this.blur()">下一页</a>&nbsp;&nbsp;<a
-				href="#" target="mainFrame" onFocus="this.blur()">尾页</a>
 			</td>
 		</tr>
 	</table>

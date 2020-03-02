@@ -1,3 +1,6 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -16,9 +19,9 @@
       <tr>
         <td align="left" valign="bottom" id="header-name">VideoPlayer</td>
         <td align="right" valign="top" id="header-right">
-        	<a href="index.html" target="topFrame" onFocus="this.blur()" class="admin-out"></a>
-            <a href="index.html" target="top" onFocus="this.blur()" class="admin-home"></a>
-        	<a href="index.html" target="_blank" onFocus="this.blur()" class="admin-index"></a>       	
+        	<a href="index.jsp" target="topFrame" onFocus="this.blur()" class="admin-out"></a>
+            <a href="index.jsp" target="top" onFocus="this.blur()" class="admin-home"></a>
+        	<a href="index.jsp" target="_blank" onFocus="this.blur()" class="admin-index"></a>       	
         </td>
       </tr>
     </table></td>
@@ -29,7 +32,7 @@
       <tr>
         <td align="left" valign="top" id="header-admin">后台管理系统</td>
         <td align="left" valign="bottom" id="header-menu">
-        <a href="index.html" target="left" onFocus="this.blur()" id="menuon">后台首页</a>
+        <a href="index.jsp" target="left" onFocus="this.blur()" id="menuon">后台首页</a>
         </td>
       </tr>
     </table></td>

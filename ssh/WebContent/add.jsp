@@ -1,7 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>主要内容区main</title>
+<c:set value="${pageContext.request.contextPath }" var="ctx"></c:set>
 <link href="css/css.css" type="text/css" rel="stylesheet" />
 <link href="css/main.css" type="text/css" rel="stylesheet" />
 <link rel="shortcut icon" href="images/main/favicon.ico" />
@@ -201,8 +206,7 @@ td.fenye {
 	<table width="99%" border="0" cellspacing="0" cellpadding="0"
 		id="searchmain">
 		<tr>
-			<td align="left" valign="top" id="addinfo"><a href="main_list.html"
-				target="mainFrame" onFocus="this.blur()" class="add">返回上一级</a></td>
+			<td width="99%" align="left" valign="top" id="addinfo">您的位置：新建视频</td>
 		</tr>
 		<tr>
 			<td align="left" valign="top">

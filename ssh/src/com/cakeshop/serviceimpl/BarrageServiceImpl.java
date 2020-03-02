@@ -21,4 +21,15 @@ public class BarrageServiceImpl implements BarrageService{
 		// TODO Auto-generated method stub
 		barrageDao.addDanmu(barrage);
 	}
+	//新增方法
+	@Override
+	public List<BarrageBean> getAllBarrage() {
+		// TODO Auto-generated method stub
+		return barrageDao.getAllBarrage();
+	}
+	@Override
+	public void deleteBarrage(int barrageId) {
+		// TODO Auto-generated method stub
+		barrageDao.deleteBarrage(barrageId);
+	}
 }

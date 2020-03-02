@@ -1,7 +1,12 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>主要内容区main</title>
+<c:set value="${pageContext.request.contextPath }" var="ctx"></c:set>
 <link href="css/css.css" type="text/css" rel="stylesheet" />
 <link href="css/main.css" type="text/css" rel="stylesheet" />
 <link rel="shortcut icon" href="images/main/favicon.ico" />
@@ -138,39 +143,37 @@ td.fenye {
 	<table width="99%" border="0" cellspacing="0" cellpadding="0"
 		id="searchmain">
 		<tr>
-			<td width="99%" align="left" valign="top" id="addinfo">您的位置：视频排行</td>
+			<td width="99%" align="left" valign="top" id="addinfo">您的位置：弹幕列表</td>
 		</tr>
 		<tr>
 			<td align="left" valign="top">
 
 				<table width="100%" border="0" cellspacing="0" cellpadding="0"
 					id="main-tab">
-					<tr>
-						<th align="center" valign="middle" class="borderright">视频排名</th>
+					<tr style="background-color: #ddd">
+						<th align="center" valign="middle" class="borderright">弹幕标号</th>
+						<th align="center" valign="middle" class="borderright">视频类型</th>
 						<th align="center" valign="middle" class="borderright">视频标题</th>
-						<th align="center" valign="middle" class="borderright">视频封面</th>
-						<th align="center" valign="middle" class="borderright">视频获赞数</th>
+						<th align="center" valign="middle" class="borderright">弹幕详情</th>
+						<th align="center" valign="middle">操作</th>
 					</tr>
+					<c:forEach items="${barrageList}" var="barrages">
 					<tr onMouseOut="this.style.backgroundColor='#ffffff'"
 						onMouseOver="this.style.backgroundColor='#edf5ff'">
 						<td align="center" valign="middle"
-							class="borderright borderbottom">1</td>
+							class="borderright borderbottom">${barrages.barrageId}</td>
 						<td align="center" valign="middle"
-							class="borderright borderbottom">留言测试留言测试留言测试留言测试内容</td>
+							class="borderright borderbottom">${barrages.video.videoType}</td>
 						<td align="center" valign="middle"
-							class="borderright borderbottom"><img src="images/videoPhotos/p1.jpg" width="74" height="50"></td>
+							class="borderright borderbottom">${barrages.video.videoTitle}</td>
 						<td align="center" valign="middle"
-							class="borderright borderbottom">admin@sina.com</td>
+							class="borderright borderbottom">${barrages.barrageDetail}</td>
+						<td align="center" valign="middle" class="borderbottom"><a
+							href="${ctx}/background/deleteBarrage?barrageId=${barrages.barrageId}" target="mainFrame" onFocus="this.blur()"
+							class="add">删除</a></td>
 					</tr>
+					</c:forEach>
 				</table>
-			</td>
-		</tr>
-		<tr>
-			<td align="left" valign="top" class="fenye">11 条数据 1/1
-				页&nbsp;&nbsp;<a href="#" target="mainFrame" onFocus="this.blur()">首页</a>&nbsp;&nbsp;<a
-				href="#" target="mainFrame" onFocus="this.blur()">上一页</a>&nbsp;&nbsp;<a
-				href="#" target="mainFrame" onFocus="this.blur()">下一页</a>&nbsp;&nbsp;<a
-				href="#" target="mainFrame" onFocus="this.blur()">尾页</a>
 			</td>
 		</tr>
 	</table>

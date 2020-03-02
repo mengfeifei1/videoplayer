@@ -1,7 +1,7 @@
 /*main_contact*/
 html{ SCROLLBAR-FACE-COLOR: #538ec6; SCROLLBAR-HIGHLIGHT-COLOR: #dce5f0; SCROLLBAR-SHADOW-COLOR: #2c6daa; SCROLLBAR-3DLIGHT-COLOR: #dce5f0; SCROLLBAR-ARROW-COLOR: #2c6daa;  SCROLLBAR-TRACK-COLOR: #dce5f0;  SCROLLBAR-DARKSHADOW-COLOR: #dce5f0; overflow-x:hidden;}
 .main_contact1{ float:left;}
-.main_images{ border:1px #cccccc solid; padding:2px;}
+.main_images{ border:1px #cccccc solid;}
 .main_changes{ background:#ededb2; padding:4px 0;}
 .main_about{ padding:0 10px; float:left;}
 .main_kuang{background:url(../images/bg1.jpg) repeat-x top left; font-weight:bold;}
